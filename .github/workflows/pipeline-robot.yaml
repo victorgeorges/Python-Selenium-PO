@@ -1,0 +1,19 @@
+name: End-to-end tests 🧪
+
+on: [push]
+
+  
+jobs:
+  cypress-run:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+                 
+      # run robots/python
+      - name: Python run
+        uses: actions/steup-python@v2
+        with:
+          python-version: '3.12'
